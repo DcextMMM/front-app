@@ -1,7 +1,5 @@
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-
-
 export class CadastroPageForm {
   private formBuilder: FormBuilder;
   private form: FormGroup;
@@ -17,8 +15,9 @@ export class CadastroPageForm {
   }
 
 
-  private createForm(): FormGroup{
-    return this.formBuilder.group ({
+  private createForm(): FormGroup {
+
+    const form = this.formBuilder.group ({
       nome: ['', [Validators.required]],
       sobrenome: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
@@ -26,14 +25,14 @@ export class CadastroPageForm {
       password:['', [Validators.required, Validators.minLength(6)]],
       cpf: ['', [Validators.required]],
 
-      address: this.formBuilder.group({
-        endereco: ['', [Validators.required]],
-        numero: ['', [Validators.required]],
-        complement:['', [Validators.required]],
-        cep: ['', [Validators.required]],
-        estado: ['', [Validators.required]],
-        cidade: ['', [Validators.required]],
-      })
+      endereco: ['', [Validators.required]],
+      numero: ['', [Validators.required]],
+      complement:['', [Validators.required]],
+      cep: ['', [Validators.required]],
+      estado: ['', [Validators.required]],
+      cidade: ['', [Validators.required]],
     });
+
+    return form;
   }
 }

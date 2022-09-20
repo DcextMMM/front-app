@@ -12,6 +12,7 @@ describe('CadastroPage', () => {
   let component: CadastroPage;
   let fixture: ComponentFixture<CadastroPage>;
   let router: Router;
+  let page;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -26,6 +27,7 @@ describe('CadastroPage', () => {
     fixture = TestBed.createComponent(CadastroPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    page = fixture.debugElement.nativeElement;
   }));
 
   it('should create register form on page init', () => {
@@ -38,8 +40,28 @@ describe('CadastroPage', () => {
   });
 
   it('should go to perfil on register', () => {
+    fixture.detectChanges();
     spyOn(router, 'navigate');
-    component.register();
+    component.registerForm.getForm().get('nome').setValue('anyname');
+    component.registerForm.getForm().get('sobrenome').setValue('anysobrenome');
+    component.registerForm.getForm().get('email').setValue('anyemail');
+    component.registerForm.getForm().get('password').setValue('anypassword');
+    component.registerForm.getForm().get('phone').setValue('anyphone');
+    component.registerForm.getForm().get('cpf').setValue('anycpf');
+    component.registerForm.getForm().get('endereco').setValue('qualquer endereco');
+    component.registerForm.getForm().get('complement').setValue('qualquer complemento');
+    component.registerForm.getForm().get('numero').setValue('qualquer numero');
+    component.registerForm.getForm().get('cep').setValue('qualquer cep');
+    component.registerForm.getForm().get('estado').setValue('qualquer estado');
+    component.registerForm.getForm().get('cidade').setValue('qualquer cidade');
+    page.querySelector('ion-button').click();
     expect(router.navigate).toHaveBeenCalledWith(['perfil']);
+  });
+
+  it('should not be allowed to register with form invalid', () =>{
+    fixture.detectChanges();
+    spyOn(router, 'navigate');
+    page.querySelector('ion-button').click();
+    expect(router.navigate).toHaveBeenCalledTimes(0);
   });
 });

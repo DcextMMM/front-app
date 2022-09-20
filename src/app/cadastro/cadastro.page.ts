@@ -18,7 +18,10 @@ export class CadastroPage implements OnInit {
     this.createForm();
   }
   register() {
-    this.router.navigate(['perfil']);
+    this.registerForm.getForm().markAllAsTouched();
+    if(this.registerForm.getForm().valid) {
+      this.router.navigate(['perfil']);
+    }
   }
 
   private createForm() {

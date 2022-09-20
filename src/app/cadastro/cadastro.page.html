@@ -8,60 +8,68 @@
 </ion-header>
 
 <ion-content>
-  <form>
+  <ion-card>
+  <form [formGroup]="registerForm.getForm()">
     <ion-item lines="full">
       <ion-label position="floating">Nome</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" required formControlName="nome"></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Sobrenome</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" required formControlName="sobrenome"></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" required formControlName="email"></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Telefone</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" required formControlName="phone"></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">CPF</ion-label>
-      <ion-input type="text" required ></ion-input>
+      <ion-input type="text" required formControlName="cpf"></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Senha</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input type="password" required formControlName="password"></ion-input>
     </ion-item>
+  </form>
+  </ion-card>
 
+  <ion-card>
+  <form [formGroup] = "registerForm.getForm()">
     <ion-item lines="full">
       <ion-label position="floating">Endereço</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" required formControlName="endereco"></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Número</ion-label>
-      <ion-input type="text" required ></ion-input>
+      <ion-input type="text" required formControlName="numero"></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Complemento</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" required formControlName="complement"></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">CEP</ion-label>
-      <ion-input type="password" required ></ion-input>
+      <ion-input type="password" required formControlName="cep"></ion-input>
       </ion-item>
       <ion-item lines="full">
         <ion-label position="floating">Estado</ion-label>
-        <ion-input type="password" required></ion-input>
+        <ion-input type="password" required formControlName="estado"></ion-input>
       </ion-item>
       <ion-item lines="full">
         <ion-label position="floating">Cidade</ion-label>
-        <ion-input type="password" required></ion-input>
+        <ion-input type="password" required formControlName="cidade"></ion-input>
       </ion-item>
+    </form>
+  </ion-card>
+
       <ion-row>
         <ion-col>
-          <ion-button type="submit" color="danger" expand="block" (click)="register()"> Cadastrar </ion-button>
+          <ion-button type="submit" color="danger"
+          expand="block" (click)="register()"> Cadastrar </ion-button>
         </ion-col>
       </ion-row>
-  </form>
 </ion-content>
