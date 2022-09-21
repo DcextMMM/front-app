@@ -1,10 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title> Perfil </ion-title>
+    <ion-title>Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item button [routerLink]="['/meus-pedidos']">
+    <ion-label>Meus Pedidos</ion-label>
+  </ion-item>
+  <ion-item button [routerLink]="['/config']">
+    <ion-label>Configurações</ion-label>
+  </ion-item>
 <app-click-alert></app-click-alert>
 <app-tabs></app-tabs>
 </ion-content>

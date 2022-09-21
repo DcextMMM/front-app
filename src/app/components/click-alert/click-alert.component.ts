@@ -5,9 +5,10 @@ import { AlertController } from '@ionic/angular';
   selector: 'app-click-alert',
   templateUrl: 'click-alert.component.html',
 })
+
+
 export class ClickAlertComponent {
   handlerMessage = '';
-  roleMessage = '';
 
   constructor(private alertController: AlertController) {}
 
@@ -18,23 +19,14 @@ export class ClickAlertComponent {
         {
           text: 'Cancelar',
           role: 'cancel',
-          handler: () => {
-            this.handlerMessage = 'Alerta cancelado';
-          },
         },
         {
           text: 'Sair',
           role: 'confirm',
-          handler: () => {
-            this.handlerMessage = 'Alerta confirmado';
-          },
         },
       ],
     });
 
     await alert.present();
-
-    const { role } = await alert.onDidDismiss();
-    this.roleMessage = `Alerta cancelado, role: ${role}`;
-  }
+}
 }
