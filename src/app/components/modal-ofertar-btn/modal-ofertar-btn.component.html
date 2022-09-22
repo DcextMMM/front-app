@@ -10,6 +10,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
+  <form [formGroup]= "ofertaForm.getForm()">
     <ion-item>
       <ion-label>Nome da oferta</ion-label>
       <ion-input [(ngModel)]="name" placeholder="Escolha um nome chamativo..."></ion-input>
@@ -27,12 +28,8 @@
     <ion-input placeholder="Ex: Tomate"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label position="fixed">Espécie</ion-label>
-    <ion-input  placeholder="Ex: Cereja, Italiano..."></ion-input>
-  </ion-item>
-  <ion-item>
     <ion-label position="fixed">Quantidade</ion-label>
-    <ion-input  placeholder="Ex: 1600 unidades"></ion-input>
+    <ion-input  placeholder="Ex: 1600Kg"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label>Data estimada para entrega:</ion-label>
@@ -51,4 +48,5 @@
     <ion-label>Observações</ion-label>
     <ion-textarea placeholder="O que o agrônomo precisa saber sobre esta produção? Escreva em detalhes..."></ion-textarea>
   </ion-item>
+</form>
 </ion-content>

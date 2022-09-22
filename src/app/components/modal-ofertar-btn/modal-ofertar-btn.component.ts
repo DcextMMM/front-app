@@ -1,5 +1,7 @@
+import { OfertaComponentForm } from './form/oferta.component.form';
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-modal-ofertar-btn',
@@ -8,8 +10,10 @@ import { ModalController } from '@ionic/angular';
 })
 export class ModalOfertarBtnComponent implements OnInit {
   name: string;
+  ofertaForm: OfertaComponentForm;
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(private modalCtrl: ModalController, private formBuilder: FormBuilder) { }
+
   cancel() {
     return this.modalCtrl.dismiss(null, 'cancel');
   }
@@ -18,6 +22,12 @@ export class ModalOfertarBtnComponent implements OnInit {
     return this.modalCtrl.dismiss(this.name, 'confirm');
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.createForm();
+  }
+
+  private createForm() {
+    this.ofertaForm = new OfertaComponentForm(this.formBuilder);
+  }
 
 }
