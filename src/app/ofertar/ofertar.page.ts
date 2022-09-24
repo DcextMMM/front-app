@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { OfertarBtnComponent } from '../components/ofertar-btn/ofertar-btn.component';
 
 @Component({
   selector: 'app-ofertar',
