@@ -8,6 +8,54 @@
 </ion-header>
 
 <ion-content>
+ <ion-card>
+  <ion-card-content>
+    <ion-item lines="full">
+      <ion-label position="floating">Nome da oferta</ion-label>
+      <ion-input placeholder="Um nome chamativo que defina a sua oferta..." type="text" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tipo de alimento</ion-label>
+      <ion-select placeholder="Fruta, verdura ou legume?">
+        <ion-select-option value="fruta">Fruta</ion-select-option>
+        <ion-select-option value="verdura">Verdura</ion-select-option>
+        <ion-select-option value="legume">Legume</ion-select-option>
+      </ion-select>
+      </ion-item>
 
+      <ion-item>
+      <ion-label>Alimento</ion-label>
+      <ion-select placeholder="Selecione">
+        <ion-select-option value="fruta">Abacaxi</ion-select-option>
+      </ion-select>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Quantidade</ion-label>
+        <ion-input placeholder="Em Kg..."type="text" required ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-text>Previsão para a colheita: </ion-text>
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="datetime"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+      </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Observações para o Agrônomo</ion-label>
+      <ion-input placeholder="Informe o seu cliente sobre detalhes da sua produção..."type="text" required ></ion-input>
+    </ion-item>
+  </ion-card-content>
+  <ion-row>
+    <ion-col>
+      <ion-button type="submit" color="danger" expand="block">Enviar Oferta</ion-button>
+    </ion-col>
+  </ion-row>
+ </ion-card>
 
 </ion-content>
