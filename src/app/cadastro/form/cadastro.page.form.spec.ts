@@ -62,7 +62,7 @@ describe('CadastroPageForm', () => {
     expect(form.get('password').valid).toBeFalsy();
   });
 
-  it('the form should be valid', () => {
+  it ('the form should be valid', () => {
     form.get('nome').setValue('anyname');
     form.get('sobrenome').setValue('anysobrenome');
     form.get('email').setValue('anyemail');
