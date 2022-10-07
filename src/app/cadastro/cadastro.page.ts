@@ -17,6 +17,7 @@ export class CadastroPage implements OnInit {
   ngOnInit() {
     this.createForm();
   }
+
   register() {
     this.registerForm.getForm().markAllAsTouched();
     if(this.registerForm.getForm().valid) {
