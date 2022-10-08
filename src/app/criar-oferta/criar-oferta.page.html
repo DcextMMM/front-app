@@ -9,15 +9,15 @@
 
 <ion-content>
  <ion-card>
+  <form [formGroup]="criarForm.getForm()">
   <ion-card-content>
     <ion-item lines="full">
       <ion-label position="floating">Nome da oferta</ion-label>
       <ion-input placeholder="Um nome chamativo que defina a sua oferta..." type="text" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Tipo de alimento</ion-label>
+      <ion-label >Tipo de alimento</ion-label>
       <ion-select placeholder="Fruta, verdura ou legume?">
-
         <ion-select-option value="fruta">Fruta</ion-select-option>
         <ion-select-option value="verdura">Verdura</ion-select-option>
         <ion-select-option value="legume">Legume</ion-select-option>
@@ -31,10 +31,10 @@
       </ion-select>
       </ion-item>
 
-      <ion-itemlines="full">
+      <ion-item lines="full">
         <ion-label position="floating">Quantidade</ion-label>
-        <ion-input placeholder="Em Kg..."type="text" required ></ion-input>
-      </ion-itemlines=>
+        <ion-input formGroupName="quantidade" placeholder="Em Kg..."type="text" required ></ion-input>
+      </ion-item>
 
       <ion-item>
         <ion-text>Previsão para a colheita: </ion-text>
@@ -49,12 +49,13 @@
 
     <ion-item lines="full">
       <ion-label position="floating">Observações para o Agrônomo</ion-label>
-      <ion-input placeholder="Informe o seu cliente sobre detalhes da sua produção..."type="text" required ></ion-input>
+      <ion-input formGroupName="obs" placeholder="Informe o seu cliente sobre detalhes da sua produção..."type="text" required ></ion-input>
     </ion-item>
   </ion-card-content>
+  </form>
   <ion-row>
     <ion-col>
-      <ion-button type="submit" color="danger" expand="block">Enviar Oferta</ion-button>
+      <ion-button type="submit" color="danger" expand="block" (click)="criar()">Enviar Oferta</ion-button>
     </ion-col>
   </ion-row>
 </ion-card>
