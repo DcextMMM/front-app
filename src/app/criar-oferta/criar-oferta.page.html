@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Criar Nova Oferta</ion-title>
+    <ion-title id="font-mont">Criar Nova Oferta</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,33 +12,33 @@
   <form [formGroup]="criarForm.getForm()">
   <ion-card-content>
     <ion-item lines="full">
-      <ion-label position="floating">Nome da oferta</ion-label>
+      <ion-label position="floating" id="font-mont">Nome da oferta</ion-label>
       <ion-input placeholder="Um nome chamativo que defina a sua oferta..." type="text" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label >Tipo de alimento</ion-label>
+      <ion-label id="font-mont">Tipo de alimento</ion-label>
       <ion-select placeholder="Fruta, verdura ou legume?">
-        <ion-select-option value="fruta">Fruta</ion-select-option>
-        <ion-select-option value="verdura">Verdura</ion-select-option>
-        <ion-select-option value="legume">Legume</ion-select-option>
+        <ion-select-option value="fruta" id="font-mont">Fruta</ion-select-option>
+        <ion-select-option value="verdura" id="font-mont">Verdura</ion-select-option>
+        <ion-select-option value="legume" id="font-mont">Legume</ion-select-option>
       </ion-select>
       </ion-item>
 
       <ion-item>
-      <ion-label>Alimento</ion-label>
+      <ion-label id="font-mont">Alimento</ion-label>
       <ion-select placeholder="Selecione">
         <ion-select-option value="fruta">Abacaxi</ion-select-option>
       </ion-select>
       </ion-item>
 
       <ion-item lines="full">
-        <ion-label position="floating">Quantidade</ion-label>
+        <ion-label position="floating" id="font-mont">Quantidade</ion-label>
         <ion-input formGroupName="quantidade" placeholder="Em Kg..."type="text" required ></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-text>Previsão para a colheita: </ion-text>
-      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+      <ion-datetime-button color="black" datetime="datetime"></ion-datetime-button>
 
       <ion-modal [keepContentsMounted]="true">
         <ng-template>
@@ -48,14 +48,14 @@
       </ion-item>
 
     <ion-item lines="full">
-      <ion-label position="floating">Observações para o Agrônomo</ion-label>
+      <ion-label position="floating" id="font-mont">Observações para o Agrônomo</ion-label>
       <ion-input formGroupName="obs" placeholder="Informe o seu cliente sobre detalhes da sua produção..."type="text" required ></ion-input>
     </ion-item>
   </ion-card-content>
   </form>
   <ion-row>
     <ion-col>
-      <ion-button type="submit" color="danger" expand="block" (click)="criar()">Enviar Oferta</ion-button>
+      <ion-button type="submit" color="secondary" id="font-mont" expand="block" (click)="criar()">Enviar Oferta</ion-button>
     </ion-col>
   </ion-row>
 </ion-card>

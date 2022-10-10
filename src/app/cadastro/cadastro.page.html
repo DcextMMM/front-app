@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Cadastro</ion-title>
+    <ion-title id="font-mont">Cadastro</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,27 +11,27 @@
   <ion-card>
   <form [formGroup]="registerForm.getForm()">
     <ion-item lines="full">
-      <ion-label position="floating">Nome</ion-label>
+      <ion-label position="floating" id="font-mont">Nome</ion-label>
       <ion-input type="text" required formControlName="nome"></ion-input>
     </ion-item>
     <ion-item lines="full">
-      <ion-label position="floating">Sobrenome</ion-label>
+      <ion-label position="floating" id="font-mont">Sobrenome</ion-label>
       <ion-input type="text" required formControlName="sobrenome"></ion-input>
     </ion-item>
     <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
+      <ion-label position="floating" id="font-mont">Email</ion-label>
       <ion-input type="text" required formControlName="email"></ion-input>
     </ion-item>
     <ion-item lines="full">
-      <ion-label position="floating">Telefone</ion-label>
+      <ion-label position="floating" id="font-mont">Telefone</ion-label>
       <ion-input type="text" required formControlName="phone"></ion-input>
     </ion-item>
     <ion-item lines="full">
-      <ion-label position="floating">CPF</ion-label>
+      <ion-label position="floating" id="font-mont">CPF</ion-label>
       <ion-input type="text" required formControlName="cpf"></ion-input>
     </ion-item>
     <ion-item lines="full">
-      <ion-label position="floating">Senha</ion-label>
+      <ion-label position="floating" id="font-mont">Senha</ion-label>
       <ion-input type="password" required formControlName="password"></ion-input>
     </ion-item>
   </form>
@@ -40,27 +40,27 @@
   <ion-card>
   <form [formGroup] = "registerForm.getForm()">
     <ion-item lines="full">
-      <ion-label position="floating">Endereço</ion-label>
+      <ion-label position="floating" id="font-mont">Endereço</ion-label>
       <ion-input type="text" required formControlName="endereco"></ion-input>
     </ion-item>
     <ion-item lines="full">
-      <ion-label position="floating">Número</ion-label>
+      <ion-label position="floating" id="font-mont">Número</ion-label>
       <ion-input type="text" required formControlName="numero"></ion-input>
     </ion-item>
     <ion-item lines="full">
-      <ion-label position="floating">Complemento</ion-label>
+      <ion-label position="floating" id="font-mont">Complemento</ion-label>
       <ion-input type="text" required formControlName="complement"></ion-input>
     </ion-item>
     <ion-item lines="full">
-      <ion-label position="floating">CEP</ion-label>
+      <ion-label position="floating" id="font-mont">CEP</ion-label>
       <ion-input type="password" required formControlName="cep"></ion-input>
       </ion-item>
       <ion-item lines="full">
-        <ion-label position="floating">Estado</ion-label>
+        <ion-label position="floating" id="font-mont">Estado</ion-label>
         <ion-input type="password" required formControlName="estado"></ion-input>
       </ion-item>
       <ion-item lines="full">
-        <ion-label position="floating">Cidade</ion-label>
+        <ion-label position="floating" id="font-mont">Cidade</ion-label>
         <ion-input type="password" required formControlName="cidade"></ion-input>
       </ion-item>
     </form>
@@ -68,7 +68,7 @@
 
       <ion-row>
         <ion-col>
-          <ion-button type="submit" color="danger"
+          <ion-button type="submit" id="btn-green" id="font-mont"
           expand="block" (click)="register()"> Cadastrar </ion-button>
         </ion-col>
       </ion-row>
