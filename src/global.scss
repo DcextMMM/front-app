@@ -24,16 +24,14 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
-
-#btn-green {
-  background-color: #006600;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 
 #btn-green-MMM {
   background-color: #77b978;
 }
 
-#font-mont{
-  font-family: 'Montserrat';
+* {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600;
 }
