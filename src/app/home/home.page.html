@@ -1,13 +1,17 @@
 <ion-content class="auth-form">
-  <ion-grid>
+  <ion-grid class="my-grid">
     <ion-card size="6" >
-    <ion-row>
+    <ion-row id="center">
+
       <ion-col align-self-center>
-        <ion-button [routerLink]="['/cadastro']" expand="block" color="secondary">Cadastro</ion-button>
-        <span >Ou </span>
-        <span >já é usuário?</span>
+        <img src="/assets/icon/logo-footer.png">
+        <ion-text>
+          Bem-vindo, produtor! </ion-text>
         <ion-button [routerLink]="['/login']" expand="block"  color="secondary">Login</ion-button>
+        <span>Não tem uma conta? Faça seu cadastro!</span>
+        <ion-button [routerLink]="['/cadastro']" expand="block" color="secondary">Cadastro</ion-button>
       </ion-col>
+
     </ion-row>
   </ion-card>
   </ion-grid>
