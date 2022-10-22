@@ -1,4 +1,3 @@
-import { TabsModule } from './components/tabs/tabs.module';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -32,10 +31,6 @@ const routes: Routes = [
   {
     path: 'minhas-ofertas',
     loadChildren: () => import('./minhas-ofertas/minhas-ofertas.module').then( m => m.MinhasOfertasPageModule)
-  },
-  {
-    path: 'esqueceu-senha',
-    loadChildren: () => import('./esqueceu-senha/esqueceu-senha.module').then( m => m.EsqueceuSenhaPageModule)
   },
   {
     path: 'meus-pedidos',

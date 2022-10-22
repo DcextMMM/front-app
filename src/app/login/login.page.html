@@ -22,7 +22,6 @@
     <ion-row>
       <ion-col>
         <ion-button type="submit" color="secondary"  expand="block" [disabled]="!form.valid" (click) = "login()">Login</ion-button>
-        <ion-button size="full" fill="clear" [routerLink]="['/esqueceu-senha']" [disabled]="!form.get('email').valid" class="small-text">Esqueceu a senha?</ion-button>
       </ion-col>
     </ion-row>
   </form>
