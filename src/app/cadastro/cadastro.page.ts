@@ -2,6 +2,7 @@ import { FormBuilder } from '@angular/forms';
 import { CadastroPageForm } from './form/cadastro.page.form';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from '../services/login/login.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -12,7 +13,7 @@ export class CadastroPage implements OnInit {
 
   registerForm: CadastroPageForm;
 
-  constructor(private router: Router, private formBuilder: FormBuilder) { }
+  constructor(private service: LoginService, private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.createForm();
@@ -20,9 +21,11 @@ export class CadastroPage implements OnInit {
 
   register() {
     this.registerForm.getForm().markAllAsTouched();
-    if(this.registerForm.getForm().valid) {
-      this.router.navigate(['perfil']);
-    }
+    console.log('aso', this.registerForm.getForm());
+    this.registerForm.getForm().value.type = 'agronomo';
+    // if(this.registerForm.getForm().valid) {
+      this.service.register(this.registerForm.getForm().value);
+    // }
   }
 
   private createForm() {

@@ -45,10 +45,10 @@ describe('CadastroPage', () => {
     component.registerForm.getForm().get('nome').setValue('anyname');
     component.registerForm.getForm().get('sobrenome').setValue('anysobrenome');
     component.registerForm.getForm().get('email').setValue('anyemail');
-    component.registerForm.getForm().get('password').setValue('anypassword');
-    component.registerForm.getForm().get('phone').setValue('anyphone');
+    component.registerForm.getForm().get('senha').setValue('anypassword');
+    component.registerForm.getForm().get('telefone').setValue('anyphone');
     component.registerForm.getForm().get('cpf').setValue('anycpf');
-    component.registerForm.getForm().get('endereco').setValue('qualquer endereco');
+    component.registerForm.getForm().get('rua').setValue('qualquer endereco');
     component.registerForm.getForm().get('complement').setValue('qualquer complemento');
     component.registerForm.getForm().get('numero').setValue('qualquer numero');
     component.registerForm.getForm().get('cep').setValue('qualquer cep');

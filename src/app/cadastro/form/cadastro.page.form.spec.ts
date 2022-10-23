@@ -19,7 +19,7 @@ describe('CadastroPageForm', () => {
   });
 
   it('should empty name be invalid', () => {
-    expect(form.get('password').valid).toBeFalsy();
+    expect(form.get('senha').valid).toBeFalsy();
   });
 
   it('should empty name be invalid', () => {
@@ -27,11 +27,11 @@ describe('CadastroPageForm', () => {
   });
 
   it('should empty name be invalid', () => {
-    expect(form.get('phone').valid).toBeFalsy();
+    expect(form.get('telefone').valid).toBeFalsy();
   });
 
   it('should empty name be invalid', () => {
-    expect(form.get('endereco').valid).toBeFalsy();
+    expect(form.get('rua').valid).toBeFalsy();
   });
 
   it('should empty name be invalid', () => {
@@ -58,18 +58,18 @@ describe('CadastroPageForm', () => {
   });
 
   it('should password less than 7 characters be invalid', () => {
-    form.get('password').setValue('12345');
-    expect(form.get('password').valid).toBeFalsy();
+    form.get('senha').setValue('12345');
+    expect(form.get('senha').valid).toBeFalsy();
   });
 
   it ('the form should be valid', () => {
     form.get('nome').setValue('anyname');
     form.get('sobrenome').setValue('anysobrenome');
     form.get('email').setValue('anyemail');
-    form.get('password').setValue('anypassword');
-    form.get('phone').setValue('anyphone');
+    form.get('senha').setValue('anypassword');
+    form.get('telefone').setValue('anyphone');
     form.get('cpf').setValue('anycpf');
-    form.get('endereco').setValue('qualquer endereco');
+    form.get('rua').setValue('qualquer endereco');
     form.get('complement').setValue('qualquer complemento');
     form.get('numero').setValue('qualquer numero');
     form.get('cep').setValue('qualquer cep');

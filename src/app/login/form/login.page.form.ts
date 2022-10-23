@@ -11,8 +11,8 @@ export class LoginPageForm {
 
   createForm(): FormGroup {
     return this.formBuilder.group({
-        email: ['', [Validators.required, Validators.email]], //valor inicial da propriedade
-        password: ['',[Validators.required, Validators.minLength(6)]]
+        login: ['', [Validators.required, Validators.email]], //valor inicial da propriedade
+        senha: ['',[Validators.required, Validators.minLength(6)]]
     });
   }
 

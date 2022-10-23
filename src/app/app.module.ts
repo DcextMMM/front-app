@@ -12,6 +12,7 @@ import { OfertarPage } from './ofertar/ofertar.page';
 import { TabsModule } from './components/tabs/tabs.module';
 import { ClickAlertModule } from './components/click-alert/click-alert.module';
 import { ConfigPage } from './config/config.page';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ConfigPage } from './config/config.page';
     AppRoutingModule,
     TabsModule,
     ClickAlertModule,
+    HttpClientModule
   ],
 
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

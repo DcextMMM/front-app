@@ -15,30 +15,30 @@ describe('LoginPageForm', () => {
 
   it ( 'should create login form empty', () => {
     expect(form).not.toBeNull();
-    expect(form.get('email')).not.toBeNull();
-    expect(form.get('email').value).toEqual('');
-    expect(form.get('email').valid).toBeFalsy();
-    expect(form.get('password')).not.toBeNull();
-    expect(form.get('password').value).toEqual('');
-    expect(form.get('password').valid).toBeFalsy();
+    expect(form.get('login')).not.toBeNull();
+    expect(form.get('login').value).toEqual('');
+    expect(form.get('login').valid).toBeFalsy();
+    expect(form.get('senha')).not.toBeNull();
+    expect(form.get('senha').value).toEqual('');
+    expect(form.get('senha').valid).toBeFalsy();
 
   });
 
   it('should have email invalid if email is not valid', () => {
-    form.get('email').setValue('Email inválido');
+    form.get('login').setValue('Email inválido');
 
-    expect(form.get('email').valid).toBeFalsy();
+    expect(form.get('login').valid).toBeFalsy();
   });
 
   it('should have email valid if email is valid', () => {
-    form.get('email').setValue('valid@email.com');
+    form.get('login').setValue('valid@email.com');
 
-    expect(form.get('email').valid).toBeTruthy();
+    expect(form.get('login').valid).toBeTruthy();
   });
 
   it('should have a valid form', () => {
-    form.get('email').setValue('valid@email.com');
-    form.get('password').setValue('qualquerPassword');
+    form.get('login').setValue('valid@email.com');
+    form.get('senha').setValue('qualquerPassword');
 
     expect(form.valid).toBeTruthy();
   });
