@@ -29,8 +29,6 @@ export class CadastroPageForm {
       numero: ['', [Validators.required]],
       complement:['', [Validators.required]],
       cep: ['', [Validators.required]],
-      estado: ['', [Validators.required]],
-      cidade: ['', [Validators.required]],
     });
 
     return form;

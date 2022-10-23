@@ -52,8 +52,6 @@ describe('CadastroPage', () => {
     component.registerForm.getForm().get('complement').setValue('qualquer complemento');
     component.registerForm.getForm().get('numero').setValue('qualquer numero');
     component.registerForm.getForm().get('cep').setValue('qualquer cep');
-    component.registerForm.getForm().get('estado').setValue('qualquer estado');
-    component.registerForm.getForm().get('cidade').setValue('qualquer cidade');
     page.querySelector('ion-button').click();
     expect(router.navigate).toHaveBeenCalledWith(['perfil']);
   });

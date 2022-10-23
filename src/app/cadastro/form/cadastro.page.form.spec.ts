@@ -46,12 +46,6 @@ describe('CadastroPageForm', () => {
     expect(form.get('cep').valid).toBeFalsy();
   });
 
-  it('should empty name be invalid', () => {
-    expect(form.get('estado').valid).toBeFalsy();
-  });
-  it('should empty name be invalid', () => {
-    expect(form.get('cidade').valid).toBeFalsy();
-  });
   it('should invalid email be invalid', () => {
     form.get('email').setValue('invalidEmail');
     expect(form.get('email').valid).toBeFalsy();
