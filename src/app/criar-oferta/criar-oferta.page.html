@@ -12,7 +12,7 @@
   <form [formGroup]="criarForm.getForm()">
   <ion-card-content>
     <ion-item lines="full">
-      <ion-label position="floating" >Nome da oferta</ion-label>
+      <ion-label position="floating">Nome da oferta</ion-label>
       <ion-input placeholder="Um nome chamativo que defina a sua oferta..." type="text" required></ion-input>
     </ion-item>
     <ion-item>
@@ -25,9 +25,9 @@
       </ion-item>
 
       <ion-item>
-      <ion-label >Alimento</ion-label>
-      <ion-select placeholder="Selecione">
-        <ion-select-option value="fruta">Abacaxi</ion-select-option>
+      <ion-label>Produto</ion-label>
+      <ion-select formGroupName="product" placeholder="Selecione">
+        <ion-select-option *ngFor="let list of listas$ | async" > {{ listas }}</ion-select-option>
       </ion-select>
       </ion-item>
 
@@ -48,7 +48,7 @@
       </ion-item>
 
     <ion-item lines="full">
-      <ion-label position="floating" >Observações para o Agrônomo</ion-label>
+      <ion-label position="floating">Observações para o Agrônomo</ion-label>
       <ion-input formGroupName="obs" placeholder="Informe o seu cliente sobre detalhes da sua produção..."type="text" required ></ion-input>
     </ion-item>
   </ion-card-content>

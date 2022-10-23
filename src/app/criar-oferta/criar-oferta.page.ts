@@ -2,6 +2,9 @@ import { Router } from '@angular/router';
 import { FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { CriarOfertaPageForm } from './form/criar-oferta.page.form';
+import { ListaService } from '../services/lista/lista.service';
+import { Lista } from '../services/lista/lista';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-criar-oferta',
@@ -12,10 +15,14 @@ export class CriarOfertaPage implements OnInit {
 
   criarForm: CriarOfertaPageForm;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) { }
+  listas: Lista[];
+  listas$: Observable<Lista[]>;
+
+  constructor(private service: ListaService, private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.createForm();
+    this.listas$ = this.service.list();
   }
 
   criar() {
@@ -28,4 +35,5 @@ export class CriarOfertaPage implements OnInit {
   private createForm() {
     this.criarForm = new CriarOfertaPageForm(this.formBuilder);
   }
+
 }

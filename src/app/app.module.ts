@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { MinhasOfertasPage } from './minhas-ofertas/minhas-ofertas.page';
 import { PerfilPage } from './perfil/perfil.page';
 import { OfertarPage } from './ofertar/ofertar.page';
-import { TabsModule } from './components/tabs/tabs.module';
 import { ClickAlertModule } from './components/click-alert/click-alert.module';
 import { ConfigPage } from './config/config.page';
 import { HttpClientModule } from '@angular/common/http';
@@ -27,7 +26,6 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    TabsModule,
     ClickAlertModule,
     HttpClientModule
   ],

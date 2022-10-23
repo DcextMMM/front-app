@@ -10,15 +10,15 @@
     <ion-row id="center">
 
       <ion-col align-self-center>
-        <ion-text>Acesse os seus pedidos por aqui:📦 </ion-text>
-        <ion-button [routerLink]="['/meus-pedidos']" expand="block"> Meus Pedidos</ion-button>
-        <ion-text>Configurações</ion-text>
-        <ion-button [routerLink]="['/config']" expand="block" color="secondary">Configurações</ion-button>
+        <ion-textarea class="ion-text-center"> Seja bem vindo de volta, produtor MMM!</ion-textarea>
+        <ion-button class="ion-margin" [routerLink]="['/ofertar']" expand="block" color="secondary">Criar Oferta</ion-button>
+        <ion-button class="ion-margin" [routerLink]="['/minhas-ofertas']" expand="block" color="secondary">Minhas Ofertas</ion-button>
+        <ion-button class="ion-margin" [routerLink]="['/meus-pedidos']" expand="block"> Meus Pedidos</ion-button>
+        <ion-button class="ion-margin" [routerLink]="['/config']" expand="block" color="secondary">Configurações</ion-button>
       </ion-col>
 
     </ion-row>
   </ion-card>
   </ion-grid>
-<app-tabs></app-tabs>
 </ion-content>
 

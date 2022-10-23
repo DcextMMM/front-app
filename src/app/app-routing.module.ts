@@ -41,10 +41,6 @@ const routes: Routes = [
     loadChildren: () => import('./config/config.module').then( m => m.ConfigPageModule)
   },
   {
-    path: 'tabs',
-    loadChildren: () => import('./components/tabs/tabs.module').then( m => m.TabsModule)
-  },
-  {
     path: 'criar-oferta',
     loadChildren: () => import('./criar-oferta/criar-oferta.module').then( m => m.CriarOfertaPageModule)
   },

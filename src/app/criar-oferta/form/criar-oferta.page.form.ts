@@ -19,8 +19,9 @@ export class CriarOfertaPageForm {
 
     const form = this.formBuilder.group ({
       nome: ['', [Validators.required]],
-      quantidade: ['', [Validators.required]],
-      obs: ['', [Validators.required]],
+      quantidade: ['',[Validators.required]],
+      obs: [''],
+      product: ['', [Validators.required]]
     });
 
     return form;
