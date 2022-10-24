@@ -7,5 +7,19 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-item>
+  <ion-label>Nome</ion-label>
+  <ion-label>Preço</ion-label>
+  <ion-label>Qnt</ion-label>
+  <ion-label>Data de <br>colheita:</ion-label>
+</ion-item>
+
+  <ion-item *ngFor="let item of data; trackBy: trackItems">
+    <ion-label>{{ item.nome }}</ion-label>
+    <ion-label>{{ item.preco }}</ion-label>
+    <ion-label>{{ item.quantidade }}</ion-label>
+    <ion-label>{{ item.data_colheita }}</ion-label>
+  </ion-item>
+
 <ion-content>
 </ion-content>

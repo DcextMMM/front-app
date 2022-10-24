@@ -11,10 +11,6 @@
  <ion-card>
   <form [formGroup]="criarForm.getForm()">
   <ion-card-content>
-    <ion-item lines="full">
-      <ion-label position="floating">Nome da oferta</ion-label>
-      <ion-input placeholder="Um nome chamativo que defina a sua oferta..." type="text" required></ion-input>
-    </ion-item>
     <ion-item>
       <ion-label >Tipo de alimento</ion-label>
       <ion-select placeholder="Fruta, verdura ou legume?">
@@ -26,14 +22,19 @@
 
       <ion-item>
       <ion-label>Produto</ion-label>
-      <ion-select formGroupName="product" placeholder="Selecione">
-        <ion-select-option *ngFor="let list of listas$ | async" > {{ listas }}</ion-select-option>
+      <ion-select formControlName="nome" placeholder="Selecione">
+        <ion-select-option *ngFor="let produto of data" > {{ produto.nome }}</ion-select-option>
       </ion-select>
       </ion-item>
 
       <ion-item lines="full">
+        <ion-label position="floating" >Preço</ion-label>
+        <ion-input formControlName="preco" placeholder="Em Reais..."type="text"></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
         <ion-label position="floating" >Quantidade</ion-label>
-        <ion-input formGroupName="quantidade" placeholder="Em Kg..."type="text"></ion-input>
+        <ion-input formControlName="quantidade" placeholder="Em Kg..." type="text"></ion-input>
       </ion-item>
 
       <ion-item>
@@ -42,14 +43,14 @@
 
       <ion-modal [keepContentsMounted]="true">
         <ng-template>
-          <ion-datetime id="datetime"></ion-datetime>
+          <ion-datetime formControlName="data_colheita" id="datetime"></ion-datetime>
         </ng-template>
       </ion-modal>
       </ion-item>
 
     <ion-item lines="full">
-      <ion-label position="floating">Observações para o Agrônomo</ion-label>
-      <ion-input formGroupName="obs" placeholder="Informe o seu cliente sobre detalhes da sua produção..."type="text" required ></ion-input>
+      <ion-label position="floating" >Observações para o Agrônomo</ion-label>
+      <ion-input formControlName="obs" placeholder="Informe o seu cliente sobre detalhes da sua produção..."type="text" ></ion-input>
     </ion-item>
   </ion-card-content>
   </form>

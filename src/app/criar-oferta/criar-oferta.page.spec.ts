@@ -45,6 +45,8 @@ describe('CriarOfertaPage', () => {
     spyOn(router, 'navigate');
     component.criarForm.getForm().get('nome').setValue('anyNome');
     component.criarForm.getForm().get('quantidade').setValue('anyQuantidade');
+    component.criarForm.getForm().get('preço').setValue('anyPreco');
+    component.criarForm.getForm().get('data_colheita').setValue('anyDataColheita');
     component.criarForm.getForm().get('obs').setValue('anyObs');
 
     page.querySelector('ion-button').click();

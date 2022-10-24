@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -10,7 +11,7 @@ import { AlertController } from '@ionic/angular';
 export class ClickAlertComponent {
   handlerMessage = '';
 
-  constructor(private alertController: AlertController) {}
+  constructor(private router: Router, private alertController: AlertController) {}
 
   async presentAlert() {
     const alert = await this.alertController.create({
@@ -23,6 +24,10 @@ export class ClickAlertComponent {
         {
           text: 'Sair',
           role: 'confirm',
+          handler: () => {
+            localStorage.clear();
+            this.router.navigate(['/home']);
+          }
         },
       ],
     });

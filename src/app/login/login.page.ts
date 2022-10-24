@@ -25,9 +25,8 @@ export class LoginPage implements OnInit {
 
   login() {
     this.submitted = true;
-    // if (this.form.valid) {
-      this.form.value.type = 'agronomo';
-      this.service.userLogin(this.form.value);
-    // }
+
+    this.form.value.type = 'produtor';
+    this.service.userLogin(this.form.value);
   }
 }

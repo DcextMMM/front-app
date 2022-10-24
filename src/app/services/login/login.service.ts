@@ -1,28 +1,3 @@
-// import { Injectable } from '@angular/core';
-// import { HttpClient, HttpHeaders } from '@angular/common/http';
-// import { Login } from './login';
-// import { environment } from 'src/environments/environment';
-// import { Observable } from 'rxjs';
-
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class LoginService {
-//   private readonly api = `${environment.api}login`;
-
-//   constructor(private http: HttpClient) {}
-
-//   list() {
-//     return this.http.get<Login[]>(this.api);
-//   }
-
-//   submit(login) {
-//     return this.http.post(this.api, login);
-//   }
-
-// }
-
-
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
@@ -50,8 +25,6 @@ export class LoginService {
     }
 
     userLogin(data: Login) {
-      console.log('ola full', data);
-
         return this.http.post<LoginResp>(`${environment.api}/login`, { ...data }).subscribe(resp => {
           console.log(resp);
 

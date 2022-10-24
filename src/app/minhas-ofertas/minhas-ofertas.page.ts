@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PedidosService } from '../services/pedidos/pedidos.service';
 
 @Component({
   selector: 'app-minhas-ofertas',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./minhas-ofertas.page.scss'],
 })
 export class MinhasOfertasPage implements OnInit {
+  public data: [];
+  constructor(private service: PedidosService) { }
 
-  constructor() { }
+  trackItems(index: number, itemObject: any) {
+    return itemObject.name;
+  }
 
   ngOnInit() {
+    this.service.listPedidos().subscribe(resp => {
+      this.data = resp;
+      console.log(resp);
+
+     }, error => {
+      console.log(error);
+    });
   }
 
 }

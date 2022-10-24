@@ -67,8 +67,6 @@ describe('CadastroPageForm', () => {
     form.get('complement').setValue('qualquer complemento');
     form.get('numero').setValue('qualquer numero');
     form.get('cep').setValue('qualquer cep');
-    form.get('estado').setValue('qualquer estado');
-    form.get('cidade').setValue('qualquer cidade');
 
     expect(form.valid).toBeTruthy();
   });

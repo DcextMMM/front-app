@@ -21,11 +21,9 @@ export class CadastroPage implements OnInit {
 
   register() {
     this.registerForm.getForm().markAllAsTouched();
-    console.log('aso', this.registerForm.getForm());
-    this.registerForm.getForm().value.type = 'agronomo';
-    // if(this.registerForm.getForm().valid) {
-      this.service.register(this.registerForm.getForm().value);
-    // }
+    this.registerForm.getForm().value.type = 'produtor';
+
+    this.service.register(this.registerForm.getForm().value);
   }
 
   private createForm() {

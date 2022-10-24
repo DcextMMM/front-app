@@ -14,18 +14,29 @@ describe('CriarOfertaPageForm', () => {
     expect(form.get('nome').valid).toBeFalsy();
   });
 
-  it('should empty product be invalid', () => {
-    expect(form.get('product').valid).toBeFalsy();
-  });
-
-  it('should empty product be invalid', () => {
+  it('should empty name be invalid', () => {
     expect(form.get('quantidade').valid).toBeFalsy();
   });
+
+  it('should empty name be invalid', () => {
+    expect(form.get('preco').valid).toBeFalsy();
+  });
+
+  it('should empty name be invalid', () => {
+    expect(form.get('obs').valid).toBeFalsy();
+  });
+
+  it('should empty name be invalid', () => {
+    expect(form.get('data_colheita').valid).toBeFalsy();
+  });
+
   it ('the form should be valid', () => {
-    form.get('nome').setValue('anyNome');
-    form.get('obs').setValue('anyObs');
-    form.get('product').setValue('anyObs');
-    form.get('quantidade').setValue('qualquerQuantidade');
+    form.get('nome').setValue('anyname');
+    form.get('quantidade').setValue('anyquantidade');
+    form.get('preco').setValue('anypreco');
+    form.get('obs').setValue('anyobs');
+    form.get('data_colheita').setValue('qualquer dataColheita');
+
     expect(form.valid).toBeTruthy();
   });
 });

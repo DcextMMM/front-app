@@ -1,6 +1,7 @@
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 export class CriarOfertaPageForm {
+  public data: [];
   private formBuilder: FormBuilder;
   private form: FormGroup;
 
@@ -16,12 +17,12 @@ export class CriarOfertaPageForm {
 
 
   private createForm(): FormGroup {
-
     const form = this.formBuilder.group ({
       nome: ['', [Validators.required]],
-      quantidade: ['',[Validators.required]],
-      obs: [''],
-      product: ['', [Validators.required]]
+      quantidade: ['', [Validators.required]],
+      preco: ['', [Validators.required]],
+      obs: ['', [Validators.required]],
+      data_colheita: ['', [Validators.required]]
     });
 
     return form;
